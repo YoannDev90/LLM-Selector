@@ -1,0 +1,59 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "llm-selector"
+version = "0.1.0"
+description = "A Python library for selecting the best LLM model based on user input using any LLM via LiteLLM"
+authors = [{ name = "YoannDev90", email = "yoanndev@outlook.fr" }]
+dependencies = ["litellm>=1.35.0", "python-dotenv>=1.0.0"]
+requires-python = ">=3.8"
+readme = "README.md"
+license = { text = "MIT" }
+keywords = ["llm", "ai", "model-selection", "litellm", "openai", "anthropic"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+[project.urls]
+Homepage = "https://github.com/YoannDev90/llm-selector"
+Repository = "https://github.com/YoannDev90/llm-selector"
+Documentation = "https://github.com/YoannDev90/llm-selector#readme"
+Issues = "https://github.com/YoannDev90/llm-selector/issues"
+Changelog = "https://github.com/YoannDev90/llm-selector/blob/main/CHANGELOG.md"
+
+[project.scripts]
+llm-selector-demo = "llm_selector.demo:main"
+
+[project.optional-dependencies]
+test = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0",
+    "pytest-cov>=4.0.0",
+    "pytest-mock>=3.10.0",
+]
+dev = [
+    "black>=23.0.0",
+    "isort>=5.12.0",
+    "flake8>=6.0.0",
+    "mypy>=1.0.0",
+    "pre-commit>=3.0.0",
+]
+docs = ["sphinx>=5.0.0", "sphinx-rtd-theme>=1.2.0"]
+
+[tool.setuptools]
+packages = ["llm_selector"]
+
+[tool.setuptools.package-data]
+llm_selector = ["py.typed"]
