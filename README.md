@@ -411,12 +411,8 @@ pytest -m "performance"   # Performance tests
 - Async and sync interfaces
 - Extensive test coverage
 
-## License
+## Publishing
 
-MIT License - see [LICENSE](LICENSE) file for details.
+For information on how to publish new versions to PyPI, see [PUBLISHING.md](PUBLISHING.md).
 
-## Support
-
-- **Issues**: [GitHub Issues](https://github.com/YoannDev90/llm-selector/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/YoannDev90/llm-selector/discussions)
-- **Documentation**: [Read the Docs](https://llm-selector.readthedocs.io/) (coming soon)
+The project includes automated publishing via GitHub Actions that triggers on version tags.
